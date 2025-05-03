@@ -9,7 +9,7 @@
 #define NB_BUS_Y 4
 #define NB_TRAJETS 10
 
-// Sémaphores pour la synchronisation
+// Sémaphores bach sncronisé
 sem_t mutex;           // Protège l'accès aux variables partagées
 sem_t sem_x_to_y;      // Autorise les trajets X -> Y
 sem_t sem_y_to_x;      // Autorise les trajets Y -> X
@@ -20,7 +20,7 @@ int waiting_x_to_y = 0;       // Nombre de bus attendant pour X -> Y
 int waiting_y_to_x = 0;       // Nombre de bus attendant pour Y -> X
 int direction = 0;            // Direction actuelle dans le tunnel (0: vide, 1: X->Y, -1: Y->X)
 
-// Structure pour les paramètres du thread bus
+//  les paramètres type
 typedef struct {
     int id;
     char origine;
